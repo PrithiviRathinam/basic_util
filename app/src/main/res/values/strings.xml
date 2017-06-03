@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Cloudadic Multi-Utility</string>
+    <string name="dissmiss_string">DISMISS</string>
+    <string name="camera_txt">Camera</string>
+    <string name="location_txt">Location</string>
+    <string name="notif_txt">Notification</string>
+    <string name="weather_txt">Weather</string>
+    <string name="dev_txt">Device Info</string>
+    <string name="check_int">Check Internet</string>
+    <string name="network_info_dialog">Network Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
