@@ -23,6 +23,7 @@ public class DeviceInfoActivity extends AppCompatActivity {
 
         getCpuInfo();
         getMemoryInfo();
+        getDeviceSuperInfo();
     }
 
     public void getCpuInfo() {
@@ -42,7 +43,7 @@ public class DeviceInfoActivity extends AppCompatActivity {
             Process proc = Runtime.getRuntime().exec("cat /proc/meminfo");
             InputStream is = proc.getInputStream();
             TextView tv = (TextView)findViewById(R.id.tvcmd);
-            tv.setText(getStringFromInputStream(is));
+            tv.append(getStringFromInputStream(is));
         }
         catch (IOException e) {
             Log.e(TAG, "------ getMemoryInfo " + e.getMessage());
@@ -94,7 +95,7 @@ public class DeviceInfoActivity extends AppCompatActivity {
             ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();
             ActivityManager activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
             activityManager.getMemoryInfo(mi);
-            double availableMegs = mi.availMem / 0x100000L;
+            double availableMegs = mi.totalMem / 0x100000L;
 
 //Percentage can be calculated for API 16+
             double percentAvail = mi.availMem / (double)mi.totalMem;

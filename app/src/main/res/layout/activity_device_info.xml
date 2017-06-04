@@ -5,32 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
     tools:context="com.pritz.android.cloudadicmutiutility.DeviceInfoActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dev_name"
-
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dev_model"
+        android:textColor="@android:color/black"
+
 
         />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dev_os_version"
-
-        />
-
-    <TextView
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/tvcmd"
+
     android:background="@android:color/black"
     android:textColor="@android:color/white"
     />
+    </ScrollView>
 </LinearLayout>

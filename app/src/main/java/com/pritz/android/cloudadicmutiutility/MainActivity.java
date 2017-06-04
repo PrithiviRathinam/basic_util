@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity
         mLocationOption = (ImageButton) findViewById(R.id.btn_location);
         mNotification = (ImageButton) findViewById(R.id.btn_notif);
         mWeatherOption = (ImageButton) findViewById(R.id.btn_weather);
-        mDeviceInfoOption = (ImageButton) findViewById(R.id.btn_weather);
+        mDeviceInfoOption = (ImageButton) findViewById(R.id.btn_device);
         mCheckInternetOption = (ImageButton) findViewById(R.id.btn_check_internet);
         mCameraOption.setOnClickListener(this);
         mLocationOption.setOnClickListener(this);

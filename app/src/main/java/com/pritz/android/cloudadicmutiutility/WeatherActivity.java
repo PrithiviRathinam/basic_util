@@ -101,7 +101,10 @@ public class WeatherActivity extends AppCompatActivity
                         android.Manifest.permission.ACCESS_FINE_LOCATION)
                         == PackageManager.PERMISSION_GRANTED) {
                     buildGoogleApiClient();
-
+                }else{
+                    ActivityCompat.requestPermissions(this,
+                            new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                            MY_PERMISSIONS_REQUEST_LOCATION);
                 }
             } else {
                 buildGoogleApiClient();
@@ -283,7 +286,10 @@ public class WeatherActivity extends AppCompatActivity
                     default:
                         break;
                 }
+
                 break;
+
+
         }
     }
 }

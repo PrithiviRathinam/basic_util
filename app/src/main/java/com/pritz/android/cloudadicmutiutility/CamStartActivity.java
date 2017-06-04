@@ -140,7 +140,7 @@ public class CamStartActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onVideoTaken(File video) {
                 super.onVideoTaken(video);
-                //showDial(video.getAbsolutePath());
+                showDial(video.getAbsolutePath());
 
             }
         });

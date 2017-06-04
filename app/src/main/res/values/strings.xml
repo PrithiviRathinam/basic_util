@@ -7,10 +7,13 @@
     <string name="weather_txt">Weather</string>
     <string name="dev_txt">Device Info</string>
     <string name="check_int">Check Internet</string>
+    <string name="facebook_app_id">119773028606816</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb119773028606816</string>
     <string name="network_info_dialog">Network Info</string>
     <string name="request_permission">This sample needs camera permission.</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_application_id" translatable="false">119773028606816</string>
     <string name="title_activity_maps">Your Location</string>
 </resources>
