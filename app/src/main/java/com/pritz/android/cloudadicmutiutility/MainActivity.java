@@ -58,7 +58,19 @@ public class MainActivity extends AppCompatActivity
                 //checkInternetProp();
                 break;
 
+            case R.id.btn_weather:
+                startActivity(new Intent(this, WeatherActivity.class));
+                break;
+            case R.id.btn_location:
+                startActivity(new Intent(this, MapsActivity.class));
+                break;
 
+            case R.id.btn_device:
+                startActivity(new Intent(this, DeviceInfoActivity.class));
+                break;
+
+            case R.id.btn_notif:
+                startActivity(new Intent(this, NotificationAct.class));
         }
     }
 

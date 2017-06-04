@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "901149311874",
+    "firebase_url": "https://cloudadicmutiutility.firebaseio.com",
+    "project_id": "cloudadicmutiutility",
+    "storage_bucket": "cloudadicmutiutility.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901149311874:android:de7b96930327957c",
+        "android_client_info": {
+          "package_name": "com.pritz.android.cloudadicmutiutility"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901149311874-ul0ao7b7ffn1atme8khu42iui8mnd63i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pritz.android.cloudadicmutiutility",
+            "certificate_hash": "62bf938057d51cf26e3eaab1bc2644068e4e6c2d"
+          }
+        },
+        {
+          "client_id": "901149311874-mv5i1t9d87e110eck56jtbp2793cdlol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9SzP5MPidDibXW2yb0IAHTD9UZajmc6w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901149311874-mv5i1t9d87e110eck56jtbp2793cdlol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

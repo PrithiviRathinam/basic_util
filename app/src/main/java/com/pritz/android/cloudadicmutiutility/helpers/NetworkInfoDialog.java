@@ -59,7 +59,7 @@ public class NetworkInfoDialog extends Dialog implements View.OnClickListener {
         mStatusTextView.setText(message.toString());
         message = new StringBuilder();
         message.append("MODE - ");
-        message.append(activeNetworkInfo.getTypeName());
+
 
         if (activeNetworkInfo.getType() == connectivityManager.TYPE_WIFI) {
             message.append("WIFI");

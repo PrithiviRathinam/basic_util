@@ -7,7 +7,7 @@
     android:background="@android:color/white"
     android:layout_height="match_parent"
     android:id="@+id/app_screen"
-    tools:context="com.pritz.android.cloudadicmutiutility.MainActivity">
+    tools:context="com.pritz.android.cloudadicmutiutility.WeatherActivity">
 
 
     <ImageButton
