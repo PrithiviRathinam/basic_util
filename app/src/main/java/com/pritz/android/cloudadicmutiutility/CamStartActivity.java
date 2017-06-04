@@ -12,6 +12,7 @@ import android.os.Message;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -37,6 +38,7 @@ import static junit.runner.Version.id;
 
 public class CamStartActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private static final String TAG = "tag";
     private CameraView cameraView;
     private ImageButton captureButton;
     private ImageButton switchButton;
@@ -140,6 +142,7 @@ public class CamStartActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onVideoTaken(File video) {
                 super.onVideoTaken(video);
+                Log.d(TAG, "onVideoTaken: " + video.getAbsolutePath());
                 showDial(video.getAbsolutePath());
 
             }
@@ -155,7 +158,7 @@ public class CamStartActivity extends AppCompatActivity implements View.OnClickL
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent();
                         intent.setAction(Intent.ACTION_VIEW);
-                        intent.setDataAndType(Uri.parse(filepath), "image/* video/*");
+                        intent.setDataAndType(Uri.parse(filepath), "video/*");
                         startActivity(intent);
                     }
                 })
@@ -186,32 +189,23 @@ public class CamStartActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.take_video:
                 cameraView.startRecordingVideo();
+                reScheduleTimer();
                 recordButton.setEnabled(false);
                 stopButton.setVisibility(View.VISIBLE);
-                if (isActivityRunning) {
-                    //pause running activity
-                    timer.cancel();
-                    isActivityRunning = false;
-                } else {
-                    reScheduleTimer();
-                    isActivityRunning = true;
-                }
-
-              mTimer.setVisibility(View.VISIBLE);
-              break;
+                mTimer.setVisibility(View.VISIBLE);
+                break;
 
 
             case R.id.stop_id:
                 timer.cancel();
                 passedSenconds = 0;
                 mTimer.setText("00 : 00");
-
                 isActivityRunning = false;
                 recordButton.setEnabled(true);
                 cameraView.stopRecordingVideo();
                 stopButton.setVisibility(View.INVISIBLE);
                 mTimer.setVisibility(View.INVISIBLE);
-                reScheduleTimer();
+
 
 
         }
